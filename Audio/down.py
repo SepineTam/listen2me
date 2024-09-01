@@ -15,9 +15,10 @@ def get_audio(url, ROOT, name, loca='uk'):
     ROOT = os.path.join(ROOT, loca)
     os.makedirs(ROOT, exist_ok=True)
 
-    if not os.path.exists(os.path.join(ROOT, name)):
-        if not name.endswith('.mp3'):
-            name += ".mp3"
+    if not name.endswith('.mp3'):
+        name += ".mp3"
+
+    if os.path.exists(os.path.join(ROOT, name)):
         file_name = os.path.abspath(os.path.join(ROOT, name))
         print(f"{name} is exist, download next one")
         return file_name, True
