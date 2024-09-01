@@ -1,0 +1,8 @@
+test/
+.venv/
+src/
+_config.py
+
+.idea/
+.vscode
+*.DS_Store
