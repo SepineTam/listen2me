@@ -8,4 +8,4 @@ is_play = False
 is_check = False
 check_position = "before"  # or you could change it to after
 
-self_destruct = False  # 阅后即焚，清除占用空间
+self_destruct = True  # 阅后即焚，清除占用空间
