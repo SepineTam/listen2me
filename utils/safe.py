@@ -27,6 +27,10 @@ def sleep(t=2, mode="sleep"):
     elif mode == "inner":
         time.sleep(t)
 
+def is_sleep(flag, t=2, mode="sleep"):
+    if flag:
+        sleep(t=t, mode=mode)
+
 
 if __name__ == '__main__':
     print(safe_time())

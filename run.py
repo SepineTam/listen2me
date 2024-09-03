@@ -22,11 +22,11 @@ def pre_load():
     ws = remove_blank(load_words(_config.WORDS_BASE))
     path_list = []
     for w in ws:
-        a_p, flag = audio(w, _config.SRC_BASE,
-                          loca=_config.pron_loca, is_play=_config.is_play)
+        a_p, loca_mp = audio(w, _config.SRC_BASE,
+                             loca=_config.pron_loca, is_play=_config.is_play)
         path_list.append(a_p)
         print(a_p)
-        if not flag:
+        if not loca_mp:
             sleep(mode="safe")
     return path_list
 
